@@ -406,20 +406,17 @@ describe('MultiListSelection', () => {
     it('uses provided equality predicate to determine if items match', () => {
       const equalityPredicate = (a, b) => a.toUpperCase() === b.toUpperCase()
       const mls = new MultiListSelection([
-        ['a', 'b', 'c'],
-        ['d', 'e']
+        ['a', 'b', 'c']
       ], equalityPredicate)
 
+      mls.selectItem('b')
+      assert.equal(mls.getSelectedItem(), 'b')
+
       mls.updateLists([
-        ['B', 'C'],
-        ['A', 'D', 'E']
+        ['A', 'A2', 'B', 'C']
       ])
 
-      mls.selectListAtIndex(0)
-      mls.getSelectedItem('B')
-
-      mls.selectListAtIndex(1)
-      mls.getSelectedItem('E')
+      assert.equal(mls.getSelectedItem(), 'B')
     })
   })
 })
