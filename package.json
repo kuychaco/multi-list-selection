@@ -1,6 +1,6 @@
 {
   "name": "multi-list-selection",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Library for managing selections across multiple lists",
   "main": "dist/multi-list-selection.js",
   "scripts": {
