@@ -78,7 +78,7 @@ export default class MultiList {
     const flattenedList = this.lists.reduce((acc, list) => {
       return acc.concat(list)
     }, [])
-    const globalIndex = flattenedList.indexOf(item)
+    const globalIndex = valueEqualityIndexOf(flattenedList, item, this.equalityPredicate)
     this.selectItemAtLocation(this.getLocalItemLocation(globalIndex))
   }
 
