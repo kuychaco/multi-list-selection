@@ -2,7 +2,7 @@
   "name": "multi-list-selection",
   "version": "0.1.0",
   "description": "Library for managing selections across multiple lists",
-  "main": "dist/index.js",
+  "main": "dist/multi-list-selection.js",
   "scripts": {
     "test": "npm run lint && mocha --compilers js:babel-register test",
     "prepublish": "npm run lint && npm run clean && npm run build",
