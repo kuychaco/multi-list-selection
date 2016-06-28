@@ -1,0 +1,19 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "babel"
+  ],
+  "extends": ["standard"],
+  "globals": {
+    "beforeEach": true,
+    "afterEach": true,
+    "describe": true,
+    "xdescribe": true,
+    "it": true,
+    "xit": true
+  },
+  "rules": {
+    "strict": 0,
+    "babel/no-await-in-loop": 2
+  }
+}
